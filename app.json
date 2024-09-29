@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "HelloWorld",
-    "slug": "expo-template-default",
+    "name": "Vigilante",
+    "slug": "vigilante",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -13,13 +13,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fametroadsorg.vigilante"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.fametroadsorg.vigilante"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +33,18 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3cd10f41-b2ca-41cb-bdc9-90c6225810ac"
+      }
+    },
+    "owner": "fametroads-org",
+    "updates": {
+      "url": "https://u.expo.dev/3cd10f41-b2ca-41cb-bdc9-90c6225810ac"
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
     }
   }
 }
