@@ -1,3 +1,5 @@
+import { useRouter } from 'expo-router';
+
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { StyleSheet, Image, Platform } from 'react-native';
 
@@ -9,16 +11,23 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
-export default function TabTwoScreen() {
+export default function LoginScreen() {
+  const router = useRouter();
+  
+  const gotoHome = () => {
+        router.push('/home');
+  }
+  
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={<Ionicons size={310} name="code-slash" style={styles.headerImage} />}>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Dark</ThemedText>
+        <ThemedText type="title">INOVATEC</ThemedText>
       </ThemedView>
-      <Button>Login with Facebook</Button>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
+      <Button onPress={gotoHome}>Fazer Login</Button>
+      <ThemedText>Exemplo de app, utilizando Expo como ferramenta para simplificar o trabalho.</ThemedText>
+      <ThemedText>Ainda falta organizar as páginas, layout e componentes.</ThemedText>
       <Collapsible title="File-based routing">
         <ThemedText>
           This app has two screens:{' '}
